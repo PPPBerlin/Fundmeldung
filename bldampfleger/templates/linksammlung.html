@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <h1>Linksammlung</h1>
+    <div class="row row-cols-1">
+      {% for link in linksammlungs %}
+        <div class="col mb-3">
+            <div class="card" style="max-width: 25rem;">
+                <div class="card-body">
+                    <p><a class="link-opacity-50" href="{{link.url}}" target=”_blank”>{{link.name}}</a></p>
+                <div class="d-flex justify-content-between">
+                    <h5 class="text-secondary">{{link.beschreibung}}</h5>
+                  </div>
+                </div>
+              </div>
+        </div>
+      {% endfor %}
+    </div>
+{% endblock content %}

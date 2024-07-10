@@ -1,0 +1,10 @@
+{% load static %}
+<nav class="navbar shadow sticky-top mb-4" style="background-color: #588157;">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand link-light" href="{% url 'start' %}"><img src="{% static 'bilder/bldam_logo.jpg' %}" width="50" height="50"  class="img-fluid" alt=""> BLDAM-Pfleger</a>
+        <a class="nav-link p-2" href="{% url 'linksammlung' %}">Linksammlung</a>
+        <a class="nav-link p-2" href="{% url 'fundmeldung' %}">Fundmeldung</a>
+      </div>
+    </div>
+</nav>

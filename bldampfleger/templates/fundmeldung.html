@@ -1,0 +1,120 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <h1>Fundmeldung</h1>
+    <div class="container-fluid">
+        <div class="shadow p-4">
+            <form id="fundmeldung">
+                <div class="row g-3">
+                    <div class="col-md-12">
+                        <label for="fundplatznummer" class="col-sm-2 col-form-label">Fundplatznummer</label>
+                        <input type="text" class="form-control" id="fundplatznummer">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="gemarkung" class="col-sm-2 col-form-label">Gemarkung</label>
+                        <input type="text" class="form-control" id="gemarkung">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="landkreis" class="col-sm-2 col-form-label">Landkreis</label>
+                        <input type="text" class="form-control" id="landkreis">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="flurname" class="col-sm-2 col-form-label">Flurname</label>
+                        <input type="text" class="form-control" id="flurname">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="flurstueck" class="col-sm-2 col-form-label">Flurstück</label>
+                        <input type="text" class="form-control" id="flurstueck">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="strassenummer" class="col-sm-2 col-form-label">Straße/HausNr.</label>
+                        <input type="text" class="form-control" id="strassenummer">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="koordinatensystem" class="col-sm-2 col-form-label">Koordinatensystem</label>
+                        <input type="text" class="form-control" id="koordinatensystem">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="utm-zone" class="col-sm-2 col-form-label">UTM-Zone</label>
+                        <input type="text" class="form-control" id="utm-zone">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="einmessungsart" class="col-sm-2 col-form-label">Einmessungsart</label>
+                        <select id="einmessungsart" class="form-select">
+                            <option value="Schrittmaß">Schrittmaß</option>
+                            <option value="Bandmaß">Bandmaß</option>
+                            <option value="digitale Kartengrundlage">digitale Kartengrundlage</option>
+                            <option value="Schätzung">Schätzung</option>
+                            <option value="Vermessungsgerät">Vermessungsgerät</option>
+                            <option value="HandGPS/Smartphone">HandGPS/Smartphone</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="eckpunkt1_nord" class="col-sm-3 col-form-label">Eckpunkt 1 - Nord</label>
+                        <input type="text" class="form-control" id="eckpunkt1_nord">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="eckpunkt2_nord" class="col-sm-3 col-form-label">Eckpunkt 2 - Nord</label>
+                        <input type="text" class="form-control" id="eckpunkt2_nord">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="eckpunkt3_nord" class="col-sm-3 col-form-label">Eckpunkt 3 - Nord</label>
+                        <input type="text" class="form-control" id="eckpunkt3_nord">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="eckpunkt4_nord" class="col-sm-3 col-form-label">Eckpunkt 4 - Nord</label>
+                        <input type="text" class="form-control" id="eckpunkt4_nord">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="eckpunkt1_ost" class="col-sm-3 col-form-label">Eckpunkt 1 - Ost</label>
+                        <input type="text" class="form-control" id="eckpunkt1_ost">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="eckpunkt2_ost" class="col-sm-3 col-form-label">Eckpunkt 2 - Ost</label>
+                        <input type="text" class="form-control" id="eckpunkt2_ost">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="eckpunkt3_ost" class="col-sm-3 col-form-label">Eckpunkt 3 - Ost</label>
+                        <input type="text" class="form-control" id="eckpunkt3_ost">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="eckpunkt4_ost" class="col-sm-3 col-form-label">Eckpunkt 4 - Ost</label>
+                        <input type="text" class="form-control" id="eckpunkt4_ost">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="meterzumortskern" class="col-sm-2 col-form-label">Meter zum Ortskern</label>
+                        <input type="text" class="form-control" id="meterzumortskern">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="lagezumortskern" class="col-sm-2 col-form-label">Lage zum Ortskern</label>
+                        <select id="lagezumortskern" class="form-select">
+                            <option value="nördlich">nördlich</option>
+                            <option value="östlich">östlich</option>
+                            <option value="südlich">südlich</option>
+                            <option value="westlich">westlich</option>
+                            <option value="nordöstlich">nordöstlich</option>
+                            <option value="südöstlich">südöstlich</option>
+                            <option value="südwestlich">südwestlich</option>
+                            <option value="nordwestlich">nordwestlich</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="lageimgelaende" class="col-sm-2 col-form-label">Lage im Gelände</label>
+                        <select id="lageimgelaende" class="form-select">
+                            {% for lage in lageimgelaende %}
+                                <option value="{{lage}}">{{lage}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+{% endblock content %}
