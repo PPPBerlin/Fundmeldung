@@ -94,7 +94,20 @@ class Pfleger(models.Model):
 
     def __str__(self):
         return str(self.name)
-    
-def Lageimgelaende():
-    lageimgelaende = ["Höhenlage", "Niederung", "Hang (abfallend nach ...)",  "Ebene", "am See/Fluss...", "im See/Fluss"]
-    return lageimgelaende
+
+def Auswahllisten():
+    einmessungsart = ["Einmessungsart", "HandGPS/Smartphone", "Schrittmaß", "digitale Kartengrundlage", "Schätzung", "Vermessungsgerät"]
+    lagezumortskern = ["Lage zum Ortskern", "nördlich", "östlich", "südlich", "westlich", "nordöstlich", "südöstlich", "südwestlich", "nordwestlich"]
+    lageimgelaende = ["Lage im Gelände", "Ebene", "Höhenlage", "Niederung", "Hang (abfallend nach ...)", "am See/Fluss...", "im See/Fluss"]
+    gelaendenutzung = ["Geländenutzung", "Straße, Weg, Platz", "Acker", "Garten", "Grube", "Wiese", "bebautes Grundstück", "Ödland", "Wald", "Moor", "Gewässer"]  
+    bodenart = ["Bodenart", "Sand", "Lehm", "Ton", "Mergel", "Kies", "lehmiger Sand", "Torf"]
+    befundart = ["Befundart", "Oberflächenfunde", "Siedlung", "Technische Anlage",
+                  "Historische Stätte", "Körperbestattung", "Stadtkern, Dorfkern",
+                    "Wölbacker", "Hortfund", "Brandbestattung", "Kirche, Kloster, Hospital",
+                    "Wasserfahrzeug", "Münzfund", "Hügelgrab", "Burgwall", "Weg, Straße, Brücke",
+                      "Einzelfund", "Großsteingrab", "Turmhügel", "Schanze/Festung", "Steinmal","Landwehr"]
+    zeitstellung = ["ältere Steinzeit", "mittlere Steinzeit", "jüngere Steinzeit", "Bronzezeit",
+                     "Eisenzeit", "Kaiserzeit", "Völkerwanderungszeit", "Slawisches Mittelalter",
+                     "Deutsches Mittelalter", "Neuzeit", "Urgeschichte", "Ur- bis Frühgeschichte"]
+    auffindungsart = ["Notbergung", "Zufallsfund", "(Flur-)Begehung", "Sonde/techn. Hilfsmittel", "Luftbild", "Publikation"]
+    return einmessungsart, lagezumortskern, lageimgelaende, gelaendenutzung, bodenart, befundart, zeitstellung, auffindungsart

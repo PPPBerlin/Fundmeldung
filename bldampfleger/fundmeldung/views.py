@@ -10,8 +10,12 @@ from . models import *
 
 def fundmeldung(request):
     fundmeldung = Fundmeldung.objects.all()
-    lageimgelaende = Lageimgelaende()
-    return render(request, 'fundmeldung.html', {'fundmeldung': fundmeldung}, {'lageimgelaende': lageimgelaende})
+    einmessungsart, lagezumortskern, lageimgelaende, gelaendenutzung, bodenart, befundart, zeitstellung, auffindungsart = Auswahllisten()
+    f = {'fundmeldung': fundmeldung, 'lagezumortskern': lagezumortskern,
+         'lageimgelaende': lageimgelaende, 'einmessungsart': einmessungsart,
+         'gelaendenutzung': gelaendenutzung, "bodenart": bodenart, "befundart": befundart,
+         "zeitstellung": zeitstellung, "auffindungsart": auffindungsart}
+    return render(request, 'fundmeldung.html', f)
 
 def linksammlung(request):
     linksammlungs = Linksammlung.objects.all()

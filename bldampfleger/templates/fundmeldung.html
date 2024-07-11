@@ -44,12 +44,9 @@
                     <div class="col-md-4">
                         <label for="einmessungsart" class="col-sm-2 col-form-label">Einmessungsart</label>
                         <select id="einmessungsart" class="form-select">
-                            <option value="Schrittmaß">Schrittmaß</option>
-                            <option value="Bandmaß">Bandmaß</option>
-                            <option value="digitale Kartengrundlage">digitale Kartengrundlage</option>
-                            <option value="Schätzung">Schätzung</option>
-                            <option value="Vermessungsgerät">Vermessungsgerät</option>
-                            <option value="HandGPS/Smartphone">HandGPS/Smartphone</option>
+                            {% for art in einmessungsart %}
+                                <option value="{{art}}">{{art}}</option>
+                            {% endfor %}
                         </select>
                     </div>
 
@@ -88,27 +85,66 @@
                     </div>
 
                     <div class="col-md-3">
-                        <label for="meterzumortskern" class="col-sm-2 col-form-label">Meter zum Ortskern</label>
-                        <input type="text" class="form-control" id="meterzumortskern">
+                        <label for="meterzumortskern" class="visually-hidden">Meter zum Ortskern</label>
+                        <input type="text" class="form-control" id="meterzumortskern" placeholder="Meter zum Ortskern">
                     </div>
                     <div class="col-md-3">
-                        <label for="lagezumortskern" class="col-sm-2 col-form-label">Lage zum Ortskern</label>
+                        <label for="lagezumortskern" class="visually-hidden">Lage zum Ortskern</label>
                         <select id="lagezumortskern" class="form-select">
-                            <option value="nördlich">nördlich</option>
-                            <option value="östlich">östlich</option>
-                            <option value="südlich">südlich</option>
-                            <option value="westlich">westlich</option>
-                            <option value="nordöstlich">nordöstlich</option>
-                            <option value="südöstlich">südöstlich</option>
-                            <option value="südwestlich">südwestlich</option>
-                            <option value="nordwestlich">nordwestlich</option>
+                            {% for lageortskern in lagezumortskern %}
+                                <option value="{{lageortskern}}">{{lageortskern}}</option>
+                            {% endfor %}
                         </select>
                     </div>
                     <div class="col-md-3">
-                        <label for="lageimgelaende" class="col-sm-2 col-form-label">Lage im Gelände</label>
+                        <label for="lageimgelaende" class="visually-hidden">Lage im Gelände</label>
                         <select id="lageimgelaende" class="form-select">
-                            {% for lage in lageimgelaende %}
-                                <option value="{{lage}}">{{lage}}</option>
+                            {% for lagegelaende in lageimgelaende %}
+                                <option value="{{lagegelaende}}">{{lagegelaende}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="gelaendenutzung" class="visually-hidden">Geländenutzung</label>
+                        <select id="gelaendenutzung" class="form-select">
+                            {% for gelaende in gelaendenutzung %}
+                                <option value="{{gelaende}}">{{gelaende}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="befundart" class="visually-hidden">Befundart</label>
+                        <select id="befundart" class="form-select">
+                            {% for art in befundart %}
+                                <option value="{{art}}">{{art}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-9">
+                        <label for="befundart-sonstiges" class="visually-hidden">Sonstiges:</label>
+                        <input type="text" class="form-control" id="befundart-sonstiges" placeholder="Sonstiges:">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="zeitstellung" class="visually-hidden">Zeitstellung</label>
+                        <select id="zeitstellung" class="form-select">
+                            {% for zeit in zeitstellung %}
+                                <option value="{{zeit}}">{{zeit}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="kultur" class="visually-hidden">Kultur</label>
+                        <input type="text" class="form-control" id="kultur" placeholder="Kultur">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="gruppe" class="visually-hidden">Gruppe</label>
+                        <input type="text" class="form-control" id="gruppe" placeholder="Gruppe">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="auffindungsart" class="visually-hidden">Auffindungsart</label>
+                        <select id="auffindungsart" class="form-select">
+                            {% for auffindung in auffindungsart %}
+                                <option value="{{auffindung}}">{{auffindung}}</option>
                             {% endfor %}
                         </select>
                     </div>
